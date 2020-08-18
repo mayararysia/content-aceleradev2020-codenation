@@ -1,0 +1,37 @@
+package com.challenge.entity;
+
+import lombok.Data;
+
+import javax.persistence.*;
+import java.io.Serializable;
+@Data
+@Embeddable
+public class SubmissionIdentity implements Serializable {
+
+    /*@ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "challenge_id", referencedColumnName = "id", nullable = false)
+    private Challenge challenge;*/
+
+    @Column(name = "user_id", nullable = false)
+    private Integer userId;
+
+    @Column(name = "challenge_id", nullable = false)
+    private Integer challengeId;
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+}

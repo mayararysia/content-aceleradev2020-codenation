@@ -1,0 +1,3 @@
+EntityManagerFactory factory = Persistence.createEntityManagerFactory("curso");
+
+factory.close();

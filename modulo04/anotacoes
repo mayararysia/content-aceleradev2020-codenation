@@ -1,0 +1,7 @@
+@EmbeddedId
+ClasseIdentity -> obrigatório o implemensta Serializable
+
+é boa prática sobrescvrever o equals e hasCode para facilitar a comparação dela
+para chave primária composta
+
+informa que é embarcada em outra entidade
